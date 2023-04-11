@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{968F3E39-8C44-46A2-AD37-81920BF0F872}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PetShop</RootNamespace>
+    <AssemblyName>PetShop</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.19.4.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.19.4\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.1.2.6\lib\net46\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.2.6.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Compression.LZ4.Streams.1.2.6\lib\net46\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.31.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.5.0.0\lib\net45\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdNet, Version=1.4.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.31\lib\net452\ZstdNet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator.cs" />
+    <Compile Include="AdminPrijavaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPrijavaForm.Designer.cs">
+      <DependentUpon>AdminPrijavaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Adresa.cs" />
+    <Compile Include="AzurirajCijenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzurirajCijenuForm.Designer.cs">
+      <DependentUpon>AzurirajCijenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AzurirajKolicinuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzurirajKolicinuForm.Designer.cs">
+      <DependentUpon>AzurirajKolicinuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB_PetShop.cs" />
+    <Compile Include="DodajProizvodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajProizvodForm.Designer.cs">
+      <DependentUpon>DodajProizvodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DodajUKorpuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajUKorpuForm.Designer.cs">
+      <DependentUpon>DodajUKorpuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grad.cs" />
+    <Compile Include="Instanca.cs" />
+    <Compile Include="Korpa.cs" />
+    <Compile Include="KorpaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KorpaForm.Designer.cs">
+      <DependentUpon>KorpaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kupac.cs" />
+    <Compile Include="NaruceniProizvod.cs" />
+    <Compile Include="Narudzba.cs" />
+    <Compile Include="NarudzbaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NarudzbaForm.Designer.cs">
+      <DependentUpon>NarudzbaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PregledNarudzbiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PregledNarudzbiForm.Designer.cs">
+      <DependentUpon>PregledNarudzbiForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Proizvod.cs" />
+    <Compile Include="Proizvodi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proizvodi.Designer.cs">
+      <DependentUpon>Proizvodi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tema.cs" />
+    <Compile Include="UkloniProizvodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UkloniProizvodForm.Designer.cs">
+      <DependentUpon>UkloniProizvodForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.sr-Cyrl-RS.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminForm.sr-Latn-RS.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPrijavaForm.resx">
+      <DependentUpon>AdminPrijavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPrijavaForm.sr-Cyrl-RS.resx">
+      <DependentUpon>AdminPrijavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPrijavaForm.sr-Latn-RS.resx">
+      <DependentUpon>AdminPrijavaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AzurirajCijenuForm.resx">
+      <DependentUpon>AzurirajCijenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AzurirajCijenuForm.sr-Cyrl-RS.resx">
+      <DependentUpon>AzurirajCijenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AzurirajKolicinuForm.resx">
+      <DependentUpon>AzurirajKolicinuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AzurirajKolicinuForm.sr-Cyrl-RS.resx">
+      <DependentUpon>AzurirajKolicinuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajProizvodForm.resx">
+      <DependentUpon>DodajProizvodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajProizvodForm.sr-Cyrl-RS.resx">
+      <DependentUpon>DodajProizvodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajUKorpuForm.resx">
+      <DependentUpon>DodajUKorpuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DodajUKorpuForm.sr-Cyrl-RS.resx">
+      <DependentUpon>DodajUKorpuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.sr-Cyrl-RS.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.sr-Latn-RS.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.sr-Cyrl-RS.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorpaForm.resx">
+      <DependentUpon>KorpaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KorpaForm.sr-Cyrl-RS.resx">
+      <DependentUpon>KorpaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NarudzbaForm.resx">
+      <DependentUpon>NarudzbaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NarudzbaForm.sr-Cyrl-RS.resx">
+      <DependentUpon>NarudzbaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledNarudzbiForm.resx">
+      <DependentUpon>PregledNarudzbiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PregledNarudzbiForm.sr-Cyrl-RS.resx">
+      <DependentUpon>PregledNarudzbiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proizvodi.resx">
+      <DependentUpon>Proizvodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proizvodi.sr-Cyrl-RS.resx">
+      <DependentUpon>Proizvodi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UkloniProizvodForm.resx">
+      <DependentUpon>UkloniProizvodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UkloniProizvodForm.sr-Cyrl-RS.resx">
+      <DependentUpon>UkloniProizvodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BAHlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1142468738-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="slike\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\personicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\keyicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lockicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\passicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BAHlogo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basket.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
